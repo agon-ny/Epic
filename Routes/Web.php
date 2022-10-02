@@ -2,7 +2,8 @@
 
     namespace Routes;
 
-    use App\Views\Viewer;
+use App\Models\UserModel;
+use App\Views\Viewer;
     use Core\Resources\Router;
 
     /**
