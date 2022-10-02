@@ -1,6 +1,6 @@
 <?php
 
-    namespace App\Views;
+    namespace App\View;
 
     use Exception;
 
@@ -8,7 +8,7 @@
      * This class is responsable for rendering views
      */
 
-    class Viewer 
+    class View
     {
 
         public static function render(String $path, Array|null $data = null) {

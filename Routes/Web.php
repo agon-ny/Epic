@@ -2,9 +2,9 @@
 
     namespace Routes;
 
-use App\Models\UserModel;
-use App\Views\Viewer;
+    use App\View\View;
     use Core\Resources\Router;
+use Database\QueryBuilder;
 
     /**
      * Here you can register any route 
@@ -19,7 +19,15 @@ use App\Views\Viewer;
         public static function set():void {
 
             Router::get("/", function () {
-                Viewer::render("home");
+                
+                $values = [
+                    "name" => "user1",
+                    "email" => "user@gmail.com",
+                    "password" => "password123"
+                ];
+
+                QueryBuilder::build("INSERT INTO `users` ", null, $values);
+
             });
 
         }

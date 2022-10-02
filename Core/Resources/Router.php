@@ -106,7 +106,7 @@
                 $params = self::$params;
 
                 // Check if its using a closure or controller method
-                if ($requestedRoute['controller']) {
+                if (@$requestedRoute['controller']) {
                     //Run controller method
                     call_user_func([$requestedRoute['controller'], $requestedRoute['method']], $params);
                 } else {

@@ -2,9 +2,9 @@
 
     namespace Database;
 
-use Exception;
-use PDO;
-use PDOException;
+    use Exception;
+    use PDO;
+    use PDOException;
 
     /**
      * This class handles the connection to the database most
