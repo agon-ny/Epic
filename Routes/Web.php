@@ -2,8 +2,10 @@
 
     namespace Routes;
 
-    use App\View\View;
-    use Core\Resources\Router;
+use App\Models\UserModel;
+use App\View\View;
+use Core\Resources\Encryption;
+use Core\Resources\Router;
 use Database\QueryBuilder;
 
     /**
@@ -18,16 +20,8 @@ use Database\QueryBuilder;
         // Register all routes inside this function!
         public static function set():void {
 
-            Router::get("/", function () {
-                
-                $values = [
-                    "name" => "user1",
-                    "email" => "user@gmail.com",
-                    "password" => "password123"
-                ];
-
-                QueryBuilder::build("INSERT INTO `users` ", null, $values);
-
+            Router::get("/", function ($params) {
+                View::render("home");
             });
 
         }
