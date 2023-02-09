@@ -3,9 +3,8 @@
     namespace Core\Resources;
 
     use App\Models\UserModel;
-    use Core\Interfaces\AuthInterface;
 
-    class Auth implements AuthInterface
+    class Auth
     {
 
         public static function authenticate(UserModel $user) {
