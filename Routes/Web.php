@@ -2,11 +2,8 @@
 
     namespace Routes;
 
-use App\Models\UserModel;
-use App\View\View;
-use Core\Resources\Encryption;
-use Core\Resources\Router;
-use Database\QueryBuilder;
+    use App\View\View;
+    use Core\Resources\Router;
 
     /**
      * Here you can register any route 

@@ -4,6 +4,7 @@
 
     use Core\Resources\Request;
     use Core\Resources\Router;
+    use Core\Resources\Session;
 
     /**
      * This is the App class wich is responsable for bootstraping
@@ -19,11 +20,15 @@
             // Bootstraping external packages
             $this->bootstrapExternalPackages();
 
+            // Starting a new session
+            Session::dispatch();
+
             // Get information about the current request
             Request::dispatch();
 
             // Set all defined routes and dispatch them to the signed URI
             Router::dispatch();
+            
         }
 
         public function bootstrapExternalPackages() {

@@ -4,13 +4,10 @@
 
     use Exception;
 
-    /**
-     * This class is responsable for rendering views
-     */
-
     class View
     {
-
+                
+                
         public static function render(String $path, Array|null $data = null) {
 
             // Check if the view needs a data
